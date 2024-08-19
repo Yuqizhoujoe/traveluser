@@ -1,0 +1,49 @@
+# Binaries
+user-service
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Build output
+/build
+/bin
+
+# Vendor directory (optional if using vendoring)
+vendor/
+
+# Go modules
+go.mod
+go.sum
+
+# Environment variables
+.env
+
+# Protobuf generated files (optional, if you don't want to commit generated files)
+*.pb.go
+
+# Log files
+*.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+*.bak
+*.tmp
+*.DS_Store
+
+# Dependency directories created by tools like Glide or dep (optional)
+_Godeps/
+_Godeps.json
+
+# Test result files
+*.out
+
+# Temporary files
+*.tmp
+*.temp

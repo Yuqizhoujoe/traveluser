@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package userservice;
+
+option go_package = "user-service/proto;proto";
+
+service UserService {
+    rpc AddRoom(AddRoomRequest) returns (AddRoomResponse);
+    rpc AddPost(AddPostRequest) returns (AddPostResponse);
+}
+
+message AddRoomRequest {
+    string email = 1;
+    string room_id = 2;
+}
+
+message AddRoomResponse {
+    bool success = 1;
+}
+
+message AddPostRequest {
+    string email = 1;
+    string post_id = 2;
+}
+
+message AddPostResponse {
+    bool success = 1;
+}
