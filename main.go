@@ -4,6 +4,7 @@ import (
 	"context"
 	"log"
 	"net"
+	"os"
 	"user-service/server"
 	"user-service/service"
 
@@ -29,12 +30,13 @@ func main() {
 
 	server.Register(grpcServer, userService)
 
-	lis, err := net.Listen("tcp", ":50051")
+	PORT := os.Getenv("PORT")
+	lis, err := net.Listen("tcp", PORT)
 	if err != nil {
 		log.Fatalf("Failed to listen: %v", err)
 	}
 
-	log.Println("User service is running on port :50051")
+	log.Println("User service is running on port: ", PORT)
 	if err := grpcServer.Serve(lis); err != nil {
 		log.Fatalf("Failed to server: %v", err)
 	}

@@ -2,7 +2,8 @@ package server
 
 import (
 	"user-service/service"
-	pb "user-service/user-service/proto"
+
+	pb "github.com/Yuqizhoujoe/user-service-proto/proto"
 
 	"google.golang.org/grpc"
 )
