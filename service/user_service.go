@@ -3,7 +3,7 @@ package service
 import (
 	"context"
 	"user-service/models"
-	db "user-service/pkg"
+	db "user-service/package"
 
 	pb "github.com/Yuqizhoujoe/user-service-proto/proto"
 
